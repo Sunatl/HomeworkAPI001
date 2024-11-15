@@ -1,4 +1,4 @@
-from rest_framework.generics import ListAPIView,CreateAPIView,RetrieveAPIView,RetrieveUpdateAPIView,DestroyAPIView
+from rest_framework.generics import ListAPIView,CreateAPIView,RetrieveAPIView,RetrieveUpdateAPIView,DestroyAPIView,RetrieveUpdateDestroyAPIView
 from .serialaizes import *
 from .models import *
 
@@ -23,6 +23,9 @@ class VakanDestroyAPIView(DestroyAPIView):
     queryset = Vakansi.objects.all()
     serializer_class = Vakansi.objects.all()
     
+class VakanRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    queryset = Vakansi.objects.all()
+    serializer_class = Vakansiserial
     
     
 
@@ -48,3 +51,7 @@ class WorkerRetrieveUpdateAPIView(RetrieveUpdateAPIView):
 class WorkerDestroyAPIView(DestroyAPIView):
     queryset =  Worker.objects.all()
     serializer_class =  Worker.objects.all()
+    
+class WorkerRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    queryset = Worker.objects.all()
+    serializer_class = WorkerSerial

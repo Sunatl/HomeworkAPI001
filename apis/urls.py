@@ -1,5 +1,7 @@
 from django.urls import path
 from .views import *
+
+
 urlpatterns = [
     path("vakan/",VakanListAPIVIEW.as_view(),name="vakan"),
     path("vakans/<int:pk>",VakanRetrieveUpdateDestroyAPIView.as_view(),name="vakans"),

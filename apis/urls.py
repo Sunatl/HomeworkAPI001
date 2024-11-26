@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import *
 urlpatterns = [
-    path("vakan",VakanListAPIVIEW.as_view(),name="vakan"),
+    path("vakan/",VakanListAPIVIEW.as_view(),name="vakan"),
     path("vakans/<int:pk>",VakanRetrieveUpdateDestroyAPIView.as_view(),name="vakans"),
     path("createvakan",VakanCreateAPIVIEW.as_view(),name="createvakan"),
     path("detailvakan/<int:pk>",VakanRetrieveAPIView.as_view(),name="detailvakan"),
